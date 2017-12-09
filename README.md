@@ -1,10 +1,10 @@
 # What is this?
 
-Logme is a HTTP web servlet that displays and logs incoming requests. It simply extracts information from HttpServletRequest and writes it to logs and to HttpServletResponse (i.e. your browser).
+Logme is a HTTP web servlet that displays and logs incoming requests. It reads the information from HttpServletRequest and writes it to logs and to HttpServletResponse (i.e. playing it back to your browser).
 
 It is a good tool for HTTP request troubleshooting.  For example, you can specify its URL as a webhook URL, and visualize what the incoming webhook requests look like.
 
-To demostrate how it works, here is a deployed version of this web application.
+To demostrate how it works, here is a deployed version of this web application running on Google App Engine.
 
 http://wualogme.appspot.com/
 
@@ -23,14 +23,14 @@ git clone https://github.com/githubwua/logme/
 
 # Installation
 
-If you need help with installing any of the prerequisites above, see: https://cloud.google.com/appengine/docs/standard/java/quickstart-java8
-
-Installing Google Cloud SDK (Linux/Mac) is easy, just do this:
+Installing Google Cloud SDK on Linux is easy, just do this:
 
 ```
 curl https://sdk.cloud.google.com | bash
 gcloud components install app-engine-java
 ```
+
+If you need help with installing the prerequisites, see: https://cloud.google.com/appengine/docs/standard/java/quickstart-java8
 
 # Deploy
 
@@ -46,15 +46,15 @@ mvn appengine:deploy
 
 # Try it out
 
-After deploying this app to Google App Engine, you can then access https://YOUR_GAE_PROJECT.appspot.com/logme from a web browser or from curl.
+After deploying this app to Google App Engine, you can access it at https://YOUR_GAE_PROJECT.appspot.com/logme from a web browser or from curl.
 
 e.g.
 
 ```
 #GET request
-curl 'https://YOUR_GAE_PROJECT/logme?colour=blue&behaviour=normal&organisation=acme'
+curl 'https://wualogme.appspot.com/logme?colour=blue&behaviour=normal&organisation=acme'
 
 #POST request
-curl -d 'abc=def' 'https://YOUR_GAE_PROJECT/logme?colour=blue&behaviour=normal&organisation=acme'
-curl -d 'abc=def' 'https://YOUR_GAE_PROJECT/logme?colour=blue&behaviour=normal&organisation=acme,globex'
+curl -d 'abc=def' 'https://wualogme.appspot.com/logme?colour=blue&behaviour=normal&organisation=acme'
+curl -d 'abc=def' 'https://wualogme.appspot.com/logme?colour=blue&behaviour=normal&organisation=acme,globex'
 ```

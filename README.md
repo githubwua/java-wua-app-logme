@@ -30,16 +30,17 @@ curl https://sdk.cloud.google.com | bash
 gcloud components install app-engine-java
 ```
 
-If you need help with installing the prerequisites, see: https://cloud.google.com/appengine/docs/standard/java/quickstart-java8
+If you need help with installing any of the prerequisites, see: https://cloud.google.com/appengine/docs/standard/java/quickstart-java8
 
 # Deploy
 
 This is how I deployed this app to Google App Engine:
 
 ```
-# Change YOUR_GAE_PROJECT below to your own GAE project name
+# Modify YOUR_GAE_PROJECT below to match your own GAE project name
+# You just need to set this once if you are deploying for the first time.
 
-gcloud config set project YOUR_GAE_PROJECT
+# gcloud config set project YOUR_GAE_PROJECT
 cd logme
 mvn appengine:deploy
 ```
@@ -57,4 +58,5 @@ curl 'https://wualogme.appspot.com/logme?colour=blue&behaviour=normal&organisati
 #POST request
 curl -d 'abc=def' 'https://wualogme.appspot.com/logme?colour=blue&behaviour=normal&organisation=acme'
 curl -d 'abc=def' 'https://wualogme.appspot.com/logme?colour=blue&behaviour=normal&organisation=acme,globex'
+curl -d @sample_message.json --header "Content-Type: application/json" https://wualogme.appspot.com/logme?token=xyz
 ```

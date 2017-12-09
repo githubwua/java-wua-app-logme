@@ -4,6 +4,15 @@ Logme is a HTTP web servlet that displays and logs incoming requests. It simply 
 
 It is a good tool for HTTP request troubleshooting.  For example, you can specify its URL as a webhook URL, and visualize what the incoming webhook requests look like.
 
+To demostrate how it works, here is a deployed version of this web application.
+
+http://wualogme.appspot.com/
+
+# Download
+```
+git clone https://github.com/githubwua/logme/
+```
+
 # Prerequisites
 
 - Google Cloud SDK
@@ -24,15 +33,20 @@ gcloud components install app-engine-java
 ```
 
 # Deploy
+
+This is how I deployed this app to Google App Engine:
+
 ```
 # Change YOUR_GAE_PROJECT below to your own GAE project name
+
 gcloud config set project YOUR_GAE_PROJECT
+cd logme
 mvn appengine:deploy
 ```
 
 # Try it out
 
-Access https://YOUR_GAE_PROJECT.appspot.com/logme from a web browser or from curl.
+After deploying this app to Google App Engine, you can then access https://YOUR_GAE_PROJECT.appspot.com/logme from a web browser or from curl.
 
 e.g.
 

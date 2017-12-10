@@ -17,6 +17,9 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+    <!-- mvn appengine:help -Ddetail=true -Dgoal=deploy -->
+    <app.deploy.promote>false</app.deploy.promote>
+    <app.deploy.version>logme</app.deploy.version>
   </properties>
 
   <prerequisites>

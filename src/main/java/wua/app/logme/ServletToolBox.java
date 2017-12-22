@@ -22,6 +22,13 @@ public class ServletToolBox {
     StringBuilder sb = new StringBuilder();
 
     String strParams = getParamsAsString(request.getParameterMap());
+
+    String ipAddress = request.getHeader("X-FORWARDED-FOR"); // Proxy IP
+    if (ipAddress == null) {
+      ipAddress = request.getRemoteAddr();
+    }
+    sb.append("Your IP address is: " + ipAddress + "\n\n");
+
     if (!strParams.isEmpty()) {
       sb.append("\n[PARAMETERS]\n");
       sb.append(strParams);
@@ -29,7 +36,8 @@ public class ServletToolBox {
 
     sb.append("\n");
     sb.append(request.getMethod() + " ");
-    sb.append(request.getRequestURL());
+    sb.append(request.getRequestURL()+" ");
+    sb.append(request.getProtocol());
     sb.append("\n");
     sb.append(getHeadersInRequest(request));
     sb.append("\n");

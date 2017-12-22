@@ -1,8 +1,8 @@
 # What is this?
 
-Logme is a HTTP web servlet that displays and logs incoming requests. It reads the information from HttpServletRequest and writes it to logs and to HttpServletResponse (i.e. playing it back to your browser).
+Logme is a HTTP web servlet that displays and logs incoming requests. It reads the information from HttpServletRequest and writes it to log and to HttpServletResponse (i.e. playing it back to your browser).
 
-It is a good tool for HTTP request troubleshooting.  For example, you can specify its URL as a webhook URL, and visualize what the incoming webhook requests look like.
+It is a useful tool for HTTP request troubleshooting.  For example, you can specify its URL as a webhook URL, and visualize what the incoming webhook requests look like.
 
 To demostrate how it works, here is a deployed version of this web application running on Google App Engine.
 

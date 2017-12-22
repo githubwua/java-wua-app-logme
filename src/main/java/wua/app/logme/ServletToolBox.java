@@ -83,7 +83,7 @@ public class ServletToolBox {
   }
 
   // returns the content of a map as string
-  // TODO: add sorting, https://www.sejuku.net/blog/16176, http://javatechnology.net/java/map-key-sort/
+  // sorting: https://www.sejuku.net/blog/16176, http://javatechnology.net/java/map-key-sort/
   public static String getMapAsString(Map<String, String> map) {
 
     // 2.Map.Entryのリストを作成する

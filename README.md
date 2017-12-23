@@ -1,6 +1,6 @@
 # What is this?
 
-Logme is a HTTP web servlet that displays and logs incoming requests. It reads requests from [HttpServletRequest](https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html) and writes them to log and to [HttpServletResponse](https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html) (i.e. like a mirror, playing them back to originating web browsers).
+Logme is an HTTP web servlet that displays and logs incoming requests. It reads requests from [HttpServletRequest](https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html) and writes them to log and to [HttpServletResponse](https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html) (i.e. like a mirror, playing requests back to originating web browsers).
 
 It is a useful tool for examining HTTP requests.  For example, you can use Logme as a [webhook](https://en.wikipedia.org/wiki/Webhook) URL, and visualize what the incoming webhook requests look like.  As a matter of fact, I built this tool to figure out what [Pub/Sub push messages](https://cloud.google.com/pubsub/docs/push) look like, and how frequently they are pushed.
 
